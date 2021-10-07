@@ -18,6 +18,8 @@ const PostPage = () => {
         arr.push(el.images.original.url);
       })
       setData(arr);
+
+      console.log("22", arr);
     }
     fn();
   }, []);
@@ -34,6 +36,7 @@ const PostPage = () => {
       `https://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=dc6zaTOxFJmzC`
     );
     let data_ = await one.json();
+    console.log("37",data_)
     if (data_) {
       let arr = [];
       data_.data.map((el)=>{
